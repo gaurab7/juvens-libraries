@@ -1,0 +1,29 @@
+{
+  "name": "juvens-libraries",
+  "version": "1.0.0",
+  "description": "books &amp; stuff",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaurab7/juvens-libraries.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaurab7/juvens-libraries/issues"
+  },
+  "homepage": "https://github.com/gaurab7/juvens-libraries#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
