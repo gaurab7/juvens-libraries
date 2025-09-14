@@ -1,9 +1,20 @@
 import express from 'express'
+import cors from 'cors'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const app = express()
-app.use(express.json())
 
+//lets server server all files in public folder
+app.use(express.static(path.join(__dirname, '../public')))
+app.use(express.json())
+app.use(cors())
+
+//PORT
 const PORT = process.env.PORT || 8848
 
 //ROUTES
@@ -15,7 +26,6 @@ const PORT = process.env.PORT || 8848
 //app.use('top',)
 //yourStuff
 //app.use('your',)
-
 
 app.listen(PORT, ()=>{
     console.log(`server started on PORT: ${PORT}`)
